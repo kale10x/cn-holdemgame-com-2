@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kale10x.github.io/cn-holdemgame-com-2/sitemap.xml

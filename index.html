@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>德州扑克游戏 · 信息专题索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #fbe9d7 0%, #f3d5b5 30%, #e7c6a6 60%, #dbb58b 100%);
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #2d281e;
+            padding: 2rem 1.2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .magazine-wrapper {
+            max-width: 960px;
+            width: 100%;
+            background: rgba(255, 250, 242, 0.78);
+            backdrop-filter: blur(4px);
+            border-radius: 48px 48px 32px 32px;
+            box-shadow: 0 20px 40px rgba(110, 70, 30, 0.15), 0 8px 20px rgba(0, 0, 0, 0.05);
+            padding: 0 0 2.5rem 0;
+            overflow: hidden;
+        }
+
+        /* 首页横幅 */
+        .hero {
+            background: linear-gradient(112deg, #c78247 0%, #a85e2b 80%);
+            padding: 3rem 2rem 2.8rem 2rem;
+            text-align: center;
+            color: #fff8ee;
+            border-bottom: 4px solid #fae1b6;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-shadow: 0 2px 6px rgba(60, 30, 10, 0.3);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .sub {
+            font-size: 1.15rem;
+            font-weight: 350;
+            opacity: 0.9;
+            max-width: 580px;
+            margin: 0.2rem auto 0 auto;
+            border-top: 1px solid rgba(255, 235, 200, 0.25);
+            padding-top: 0.8rem;
+        }
+
+        /* 卡片内容区 */
+        .content-cards {
+            padding: 2.2rem 2rem 1.4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 8px 18px rgba(150, 95, 40, 0.08);
+            transition: box-shadow 0.15s;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 28px rgba(140, 85, 30, 0.12);
+        }
+
+        .card h2 {
+            font-size: 1.6rem;
+            font-weight: 540;
+            color: #7a4d28;
+            margin-bottom: 0.75rem;
+            border-left: 6px solid #c78247;
+            padding-left: 1rem;
+        }
+
+        .card p {
+            margin-bottom: 0.9rem;
+            font-size: 1rem;
+            color: #3d3529;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .inset-highlight {
+            background: #fcf5ea;
+            padding: 1rem 1.4rem;
+            border-radius: 20px;
+            margin: 1rem 0 0.6rem 0;
+            border: 1px solid #eedbc8;
+        }
+
+        .inset-highlight strong {
+            color: #8f5f34;
+        }
+
+        /* 圆角按钮感链接 */
+        .link-btn-like {
+            display: inline-block;
+            background: #e7d2b6;
+            color: #3f2d1b;
+            padding: 0.3rem 1.1rem;
+            border-radius: 40px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.1s;
+            border: 1px solid #d6b693;
+            font-size: 0.95rem;
+        }
+
+        .link-btn-like:hover {
+            background: #dbb58b;
+            transform: scale(1.02);
+            border-color: #b28354;
+        }
+
+        .faq-summary {
+            background: #f2e5d6;
+            border-radius: 24px;
+            padding: 1.5rem 2rem;
+            margin-top: 0.8rem;
+        }
+
+        .faq-summary p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-summary .q {
+            font-weight: 600;
+            color: #623f21;
+        }
+
+        /* 页尾访问提示 */
+        .footer-note {
+            background: #efe1cf;
+            margin: 0.5rem 2rem 0.2rem 2rem;
+            padding: 1.4rem 1.8rem;
+            border-radius: 40px;
+            text-align: center;
+            font-size: 1rem;
+            color: #2f281c;
+            border: 1px solid #ddc6ab;
+        }
+
+        .footer-note a {
+            color: #5a3b1f;
+            text-decoration: none;
+            font-weight: 550;
+            border-bottom: 2px solid #b58b62;
+            padding-bottom: 0.1rem;
+        }
+
+        .footer-note a:hover {
+            color: #3a2816;
+            border-bottom-color: #8a613b;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+
+            .hero {
+                padding: 2rem 1rem 2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero .sub {
+                font-size: 1rem;
+            }
+
+            .content-cards {
+                padding: 1.2rem 1rem 1rem 1rem;
+                gap: 1.4rem;
+            }
+
+            .card {
+                padding: 1.4rem 1.2rem;
+                border-radius: 22px;
+            }
+
+            .card h2 {
+                font-size: 1.35rem;
+                padding-left: 0.7rem;
+            }
+
+            .faq-summary {
+                padding: 1rem 1.2rem;
+            }
+
+            .footer-note {
+                margin: 0.5rem 1rem 0.2rem 1rem;
+                padding: 1rem 1.2rem;
+                font-size: 0.95rem;
+            }
+
+            .link-btn-like {
+                padding: 0.2rem 0.9rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="magazine-wrapper">
+        <!-- 首页横幅 -->
+        <div class="hero">
+            <h1>资料索引 · 德州扑克</h1>
+            <div class="sub">规则框架 · 策略逻辑 · 场景应用 · 信息梳理</div>
+        </div>
+
+        <!-- 三段自然介绍 + 扩展内容 -->
+        <div class="content-cards">
+            <!-- 卡片一：背景说明 -->
+            <div class="card">
+                <h2>从规则到策略档案</h2>
+                <p>德州扑克（Texas Hold'em）是现代扑克变体中最具代表性的形式之一。其核心结构由两张底牌与五张公共牌组合，每轮下注圈蕴含概率、位置与心理博弈。作为一种信息不完全游戏，玩家需要在有限可见信息下做出决策，这也使它成为博弈论与行为分析的研究样本。</p>
+                <div class="inset-highlight">
+                    <strong>▸ 资料整理视角</strong> · 从基础手牌排名、位置分类到翻前范围构建，德州扑克的知识体系具备清晰的层级结构，适合系统化索引。
+                </div>
+                <p>目前，关于 <a href="https://cn-holdemgame.com" class="link-btn-like">德州扑克游戏</a> 的中文资料分散在不同平台，规则说明、概率表格、锦标赛结构等信息需要整合。本节专题致力于整理这些散落的片段，形成可查阅的参考框架。</p>
+            </div>
+
+            <!-- 卡片二：信息索引与场景应用 -->
+            <div class="card">
+                <h2>三个信息维度</h2>
+                <p><strong>① 规则与结构 ·</strong> 包括发牌顺序、下注轮次（翻前、翻后、转牌、河牌）、加注上限、showdown 比牌规则。不同赛事（现金局、SNG、MTT）的结构差异也属于基础索引内容。</p>
+                <p><strong>② 决策概率 ·</strong> 补牌数（outs）计算、成牌概率、底池赔率、隐含赔率，以及常见的翻前胜率对照。这些数值是策略推演中反复引用的工具。</p>
+                <p><strong>③ 行为与位置 ·</strong> 位置（UTG、MP、CO、BTN 等）对起手牌范围的影响，以及翻后位置优势如何改变下注频率。许多策略类资料会以位置表格作为分类起点。</p>
+                <div class="faq-summary">
+                    <p><span class="q">FAQ 摘要 · 初学者常问</span></p>
+                    <p>Q: 起手牌质量如何快速判断？<br>A: 通常分为口袋对、高张（AK/AQ 等）、同花连张、边缘牌，可借助胜率表或位置范围图。</p>
+                    <p>Q: 翻后听牌怎么处理？<br>A: 根据补牌数和底池赔率估算期望值，同时考虑隐含赔率与对手弃牌率。</p>
+                </div>
+            </div>
+
+            <!-- 卡片三：资料整理场景与延伸 -->
+            <div class="card">
+                <h2>索引场景与延伸</h2>
+                <p>从独立学习者的角度看，一个经过整理的资料索引能够节省大量重复搜索的时间。例如将翻前位置策略表、常见翻牌结构、下注尺度指南归类存放，方便在实战分析时快速调取。同时，不同风格（紧凶、松凶、被动）的玩法特征也适合以对比表格的形式收录。</p>
+                <p>对于 <a href="https://cn-holdemgame.com" class="link-btn-like">德州扑克游戏</a> 爱好者而言，信息索引的价值还体现在术语统一与概念精确化。比如 "c-bet"（持续下注）的适用条件、"float" 跟注策略的时机、"range merge" 等概念，如果能有分类说明，会大幅降低理解门槛。</p>
+                <p>此外，从锦标赛结构（盲注级别、涨盲时间、筹码深度变化）到现金局动态（straddle、cap、rake），不同局域规则也存在差异。资料索引可以按场景划分，帮助玩家快速对应自己所在的游戏环境。</p>
+                <p style="margin-top: 0.8rem; font-size: 0.95rem; color: #74624b;">—— 本专题仅作信息整理用途，不提供投注建议或承诺盈利。</p>
+            </div>
+        </div>
+
+        <!-- 页尾访问提示 -->
+        <div class="footer-note">
+            <p>如您希望进一步查阅整合后的规则、概率表与策略笔记，可参考 <a href="https://cn-holdemgame.com">德州扑克游戏</a> 专题页面。该资料站从规则到术语持续更新，适合作为策略学习的参考入口。</p>
+        </div>
+    </div>
+</body>
+</html>
